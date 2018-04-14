@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Copperplate.ttc">
+            <string>Copperplate</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="hw8" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="spotlight1" translatesAutoresizingMaskIntoConstraints="NO" id="ini-d7-Yoz">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="UCH-ha-IZ8">
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BA2-dI-JcP">
+                                        <rect key="frame" x="140.5" y="0.0" width="94" height="50"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="2R5-ni-bLz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="23"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="touchbutton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vTj-Uf-tAC"/>
+                                        </connections>
+                                    </button>
+                                    <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" minValue="0.0" maxValue="30" translatesAutoresizingMaskIntoConstraints="NO" id="Df4-hV-O90">
+                                        <rect key="frame" x="92" y="50" width="191.5" height="32"/>
+                                        <connections>
+                                            <action selector="slider:" destination="BYZ-38-t0r" eventType="valueChanged" id="XiW-Gp-jbV"/>
+                                        </connections>
+                                    </slider>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ntg-Ye-toP" userLabel="dancingView">
+                                        <rect key="frame" x="0.0" y="81" width="375" height="466"/>
+                                    </imageView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="Df4-hV-O90" firstAttribute="width" secondItem="UCH-ha-IZ8" secondAttribute="width" multiplier="1:2" id="9pk-eB-7Jj"/>
+                                    <constraint firstItem="BA2-dI-JcP" firstAttribute="width" secondItem="UCH-ha-IZ8" secondAttribute="width" multiplier="1:4" id="UGV-ra-VMy"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ini-d7-Yoz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="F9e-kx-muJ"/>
+                            <constraint firstItem="UCH-ha-IZ8" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="Jlk-0q-SoD"/>
+                            <constraint firstItem="UCH-ha-IZ8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QBD-7D-BRM"/>
+                            <constraint firstItem="UCH-ha-IZ8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="ba1-BW-GQc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UCH-ha-IZ8" secondAttribute="bottom" id="c1W-xQ-fks"/>
+                            <constraint firstItem="ini-d7-Yoz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="dQN-Wa-19r"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="ini-d7-Yoz" secondAttribute="bottom" id="dt2-js-ioW"/>
+                            <constraint firstItem="ini-d7-Yoz" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="gFv-0T-95q"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="button" destination="BA2-dI-JcP" id="bju-fI-Ye9"/>
+                        <outlet property="imageView" destination="Ntg-Ye-toP" id="Yx9-mp-o15"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="spotlight1" width="600" height="601"/>
+    </resources>
+</document>
